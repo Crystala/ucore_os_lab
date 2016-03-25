@@ -1,0 +1,7 @@
+boot
+kern/debug
+kern/driver
+kern/mm
+kern/sync
+kern/trap
+libs
