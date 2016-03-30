@@ -1,0 +1,16 @@
+boot
+kern/debug
+kern/driver
+kern/fs
+kern/fs/devs
+kern/fs/sfs
+kern/fs/swap
+kern/fs/vfs
+kern/mm
+kern/process
+kern/schedule
+kern/sync
+kern/syscall
+kern/trap
+libs
+user/libs

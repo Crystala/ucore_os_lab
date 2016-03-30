@@ -20,3 +20,9 @@ a.out
 chytesting
 disk0
 *.orig
+*.zip
+*.creator
+*.user
+*.config
+*.files
+*.include

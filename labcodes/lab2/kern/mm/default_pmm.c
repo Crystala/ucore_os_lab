@@ -9,7 +9,7 @@
    usually split, and the remainder added to the list as another free block.
    Please see Page 196~198, Section 8.2 of Yan Wei Min's chinese book "Data Structure -- C programming language"
 */
-// LAB2 EXERCISE 1: 2013011720
+// LAB2 EXERCISE 1: 2013011336
 // you should rewrite functions: default_init,default_init_memmap,default_alloc_pages, default_free_pages.
 /*
  * Details of FFMA
@@ -76,8 +76,8 @@ default_init_memmap(struct Page *base, size_t n) {
     }
     base->property = n;
     SetPageProperty(base);
-    nr_free += n;
     list_add(&free_list, &(base->page_link));
+    nr_free += n;
 }
 
 static struct Page *
@@ -104,8 +104,8 @@ default_alloc_pages(size_t n) {
             list_add(previous_node_ptr, &(p->page_link));
             SetPageProperty(p);
         }
-        nr_free -= n;
         ClearPageProperty(page);
+        nr_free -= n;
     }
     return page;
 }
